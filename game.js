@@ -9,7 +9,7 @@ window.onload = function() {
     var score;
     var timeLeft;
     var tilesLeft;
-    var game = new Phaser.Game(500,500);
+    var game = new Phaser.Game(400,400);
 
     var playGame = function(game) {};
     var titleScreen = function(game) {};
@@ -49,14 +49,14 @@ window.onload = function() {
             game.stage.disableVisibilityChange = true;
 
             var style = {
-                font: "32px Consolas",
+                font: "22px Consolas",
                 fill: "Pink",
                 align: "center"
             }
 
             this.scoreText = game.add.text(5, 5, "Score: " + score, style);
-            this.timeText = game.add.text(5, game.height-5, "Time left: " + timeLeft, style);
-            this.timeText.anchor.set(0, 1);
+            this.timeText = game.add.text(game.width-5, 5, "Time left: " + timeLeft, style);
+            this.timeText.anchor.set(1, 0);
             game.time.events.loop(Phaser.Timer.SECOND, this.decreaseTime, this);
         },
 
@@ -166,7 +166,7 @@ window.onload = function() {
     gameOver.prototype = {
         create: function() {
             var style = {
-                font: "32px Consolas",
+                font: "22px Consolas",
                 fill: "Yellow",
                 align: "center"
             };
