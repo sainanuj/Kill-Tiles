@@ -141,7 +141,7 @@ window.onload = function() {
                 fill: "pink",
                 align: "center"
             };
-            var text = game.add.text(game.width/2, game.height/2 - 100, "Crack the code!", style);
+            var text = game.add.text(game.width/2, game.height/2 - 100, "Let's go!", style);
             text.anchor.set(0.5);
             var soundButton = game.add.button(game.width/2-100, game.height/2+100, "soundicons", this.startGame, this);
             soundButton.frame = 1;
