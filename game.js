@@ -37,7 +37,7 @@ window.onload = function() {
 
         create: function() {
             score = 0;
-            timeLeft = 60;
+            timeLeft = 90;
             this.placeTiles();
             
             if (playSound) {
